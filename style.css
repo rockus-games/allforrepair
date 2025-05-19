@@ -1,0 +1,411 @@
+body {
+  margin: 0%;
+  background-color: #f9f9f9;
+  overflow-x: hidden;
+}
+.header {
+  width: 100%;
+  height: 6vw;
+  display: flex;
+  background-color: #597aac;
+  justify-content: space-between;
+  align-content: center;
+  z-index: 999;
+  position: fixed;
+}
+.header > h1 {
+  font-size: 2vw;
+  align-self: center;
+  color: #fff;
+  font-family: "M PLUS 1p";
+  margin-left: 15vw;
+}
+.header > div {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  align-self: center;
+  margin-right: 15vw;
+}
+.header > div > a {
+  font-size: 1.3vw;
+  text-decoration: none;
+  color: transparent;
+  color: #fff;
+  font-family: "Roboto";
+}
+.first {
+  display: flex;
+}
+.first > div {
+  width: 70vw;
+  height: 40vw;
+  background-color: #e5e5e5;
+  margin-top: 9vw;
+  margin-left: 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2vw;
+}
+.first > div > img {
+  width: 67vw;
+}
+.first > div > h1 {
+  margin: 0%;
+  font-size: 2.6vw;
+  text-align: center;
+  color: #597aac;
+  font-family: "M PLUS 1p";
+  margin-top: 2vw;
+}
+.second {
+  margin-top: 5vw;
+  margin-left: 11.5vw;
+  width: 75vw;
+  height: 40vw;
+  background-image: url(./images/ourassortment.png);
+  background-size: 75vw 40vw;
+  background-repeat: no-repeat;
+}
+.rootblocksassortment {
+  width: 67vw;
+  height: 29vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 5vw;
+  overflow-y: scroll;
+}
+.block {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1vw;
+  width: 20vw;
+  height: 15vw;
+  background-color: #ffffff;
+  margin-top: 1vw;
+  border-radius: 1vw;
+  box-shadow: 0px 0px 20px #3f3f3f;
+}
+.second > h1 {
+  justify-self: center;
+  padding-top: 2vw;
+  color: #6c646f;
+  font-family: "M PLUS 1p";
+  font-size: 2.4vw;
+}
+.rootblocksassortment::-webkit-scrollbar {
+  background-color: #9691a7;
+  width: 1vw;
+  border-radius: 100vw;
+}
+.rootblocksassortment::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  width: 0.5vw;
+  border-radius: 100vw;
+  border: 0.25vw solid #9691a7;
+}
+.block > h1 {
+  align-self: center;
+  text-align: center;
+  color: #383838;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5vw;
+}
+.shorttext {
+  overflow-y: scroll;
+  height: 3.5vw;
+}
+.block > img {
+  width: 70%;
+  align-self: center;
+}
+.third {
+  display: flex;
+  flex-direction: column;
+}
+.third > h1 {
+  align-self: center;
+  margin-top: 3vw;
+  font-size: 2.6vw;
+  color: #6c646f;
+  font-family: "M PLUS 1p";
+}
+.gallery {
+  margin: 0%;
+  width: 60vw;
+  display: flex;
+  overflow-x: scroll;
+}
+.gallery > div {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 2vw;
+  padding: 1vw;
+  flex: none;
+}
+.gallery > div > img {
+  width: 58vw;
+}
+.gallery-wrap > div::-webkit-scrollbar {
+  display: none;
+}
+.gallery-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1vw;
+}
+#backBtn,
+#nextBtn {
+  width: 5vw;
+  cursor: pointer;
+  margin: 2vw;
+}
+.fourth > img {
+  width: 100vw;
+  height: 50vw;
+}
+.second > img {
+  width: 72vw;
+  margin-left: 2.5vw;
+}
+#five {
+  height: 36vw;
+  background-size: 75vw 36vw;
+}
+.sixth {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.sixth > h1 {
+  align-self: center;
+  margin-top: 3vw;
+  font-size: 2.6vw;
+  color: #6c646f;
+  font-family: "M PLUS 1p";
+}
+/* Стили для вашего адреса */
+/* Контейнер карты */
+.map-container {
+  width: 70vw;
+  margin: 0 auto;
+  border-radius: 1.5vw;
+  overflow: hidden;
+  box-shadow: 0 0.5vw 1.5vw rgba(0, 0, 0, 0.1);
+}
+
+/* Карта */
+.map-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.map-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Кнопка */
+.route-button {
+  display: block;
+  width: 100%;
+  padding: 1.2vw;
+  background: #ff0000;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1.5vw;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.route-button:hover {
+  background: #cc0000;
+}
+.footer {
+  width: 100vw;
+  height: 13vw;
+  background-color: #597aac;
+  margin-top: 5vw;
+  display: flex;
+  justify-content: space-between;
+}
+.footer > div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 15vw;
+  text-align: end;
+  margin-top: 4vw;
+}
+.footer > div > a {
+  font-size: 1.3vw;
+  text-decoration: none;
+  color: transparent;
+  color: #fff;
+  font-family: "Roboto";
+}
+.footer > div > h1 {
+  font-size: 1.3vw;
+  text-decoration: none;
+  color: transparent;
+  color: #fff;
+  font-family: "Roboto";
+  font-weight: 400;
+  margin: 0%;
+  margin-top: 0.4vw;
+}
+.footer > h1 {
+  font-size: 1.3vw;
+  text-decoration: none;
+  color: transparent;
+  color: #fff;
+  font-family: "Roboto";
+  font-weight: 400;
+  margin-top: 9vw;
+  margin-left: 15vw;
+}
+.imgmobile {
+  display: none;
+}
+#mob {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  .header {
+    height: 20vw;
+  }
+  .header > h1 {
+    width: 25vw;
+    text-align: center;
+    font-size: 5vw;
+    margin-left: 10vw;
+  }
+  .header > div > a {
+    font-size: 4vw;
+    margin-left: 10vw;
+  }
+  .first > div > img {
+    display: none;
+  }
+  .first > div {
+    margin-top: 25vw;
+    width: 90vw;
+    margin-left: 5vw;
+    height: 75vw;
+    border-radius: 6vw;
+  }
+  .first > div > h1 {
+    font-size: 5vw;
+  }
+  .imgmobile {
+    display: block !important;
+    width: 83vw !important;
+    margin-top: 2vw;
+  }
+  .second {
+    width: 96vw;
+    height: 100vw;
+    background-image: url(./images/ourassortment2.png);
+    background-size: 96vw 100vw;
+    margin-left: 1vw;
+  }
+  .second > h1 {
+    font-size: 5vw;
+  }
+  .rootblocksassortment {
+    width: 90vw;
+    height: 85.6vw;
+    margin-left: 4.6vw;
+    grid-template-columns: auto auto;
+  }
+  .block {
+    width: 40vw;
+    height: 30vw;
+    margin-top: 3vw;
+    margin-left: 2vw;
+    box-shadow: 0px 0px 10px #3f3f3f;
+  }
+  .block > h1 {
+    font-size: 3vw;
+  }
+  .rootblocksassortment::-webkit-scrollbar {
+    width: 2vw;
+    margin-left: 10vw;
+  }
+  .rootblocksassortment::-webkit-scrollbar-thumb {
+    border: 0.5vw solid #9691a7;
+  }
+  .third > h1 {
+    font-size: 5vw;
+  }
+  .gallery {
+    width: 80vw;
+  }
+  .gallery > div > img {
+    width: 71vw;
+    height: 70vw;
+  }
+  .gallery-wrap > img {
+    width: 10vw !important;
+  }
+  .fourth > img {
+    display: none;
+  }
+  #mob {
+    margin-top: 10vw;
+    width: 100%;
+    height: 70vw;
+    display: block !important;
+  }
+  #five {
+    width: 96vw;
+    height: 100vw;
+    background-image: url(./images/ourassortment2.png);
+    background-size: 96vw 95vw;
+    margin-left: 1vw;
+  }
+  #five > h1 {
+    text-align: center;
+    width: 60vw;
+  }
+  #five > img {
+    display: none;
+    width: 75vw;
+    margin: 0%;
+    margin-left: 10vw;
+  }
+  .sixth > h1 {
+    font-size: 5vw;
+  }
+  .route-button {
+    font-size: 4vw;
+  }
+  .map-container {
+    width: 85vw;
+  }
+  .footer {
+    height: 30vw;
+  }
+  .footer > h1 {
+    font-size: 4vw;
+    margin-top: 5vw;
+    margin-left: 8vw;
+    white-space: nowrap;
+  }
+  .footer > div > a {
+    font-size: 4vw;
+  }
+  .footer > div > h1 {
+    font-size: 3vw;
+    width: 70vw;
+  }
+}
