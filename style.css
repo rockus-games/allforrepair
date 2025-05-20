@@ -399,14 +399,20 @@ body {
   .footer {
     height: 30vw;
   }
-  .footer > h1 {
+  .footer > a {
     font-size: 4vw;
     margin-top: 5vw;
     margin-left: 8vw;
     white-space: nowrap;
+    text-decoration: none;
+    color: transparent;
+    color: white;
+    font-family: "Roboto";
   }
   .footer > div > a {
     font-size: 4vw;
+    width: 40vw;
+    margin-left: 30vw;
   }
   .footer > div > h1 {
     font-size: 3vw;
