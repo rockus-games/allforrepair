@@ -263,7 +263,7 @@ body {
   margin: 0%;
   margin-top: 0.4vw;
 }
-.footer > h1 {
+.footer > a {
   font-size: 1.3vw;
   text-decoration: none;
   color: transparent;
