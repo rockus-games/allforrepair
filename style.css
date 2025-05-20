@@ -141,12 +141,12 @@ body {
 .gallery > div {
   display: grid;
   grid-template-columns: auto auto auto;
-  gap: 2vw;
   padding: 1vw;
   flex: none;
 }
 .gallery > div > img {
-  width: 58vw;
+  width: 28vw;
+  border-radius: 1vw;
 }
 .gallery-wrap > div::-webkit-scrollbar {
   display: none;
@@ -350,9 +350,13 @@ body {
   .gallery {
     width: 80vw;
   }
+  .gallery > div {
+    margin: 0%;
+  }
   .gallery > div > img {
-    width: 71vw;
-    height: 70vw;
+    width: 70vw;
+    height: 80vw;
+    border-radius: 2vw;
   }
   .gallery-wrap > img {
     width: 10vw !important;

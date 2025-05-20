@@ -8,7 +8,7 @@ const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
 
 // Функция для получения размера прокрутки
 const getScrollStep = () => {
-  return window.innerWidth * (isMobile() ? 0.77 : 0.64);
+  return window.innerWidth * (isMobile() ? 0.72 : 0.6);
 };
 
 // Обновление размера прокрутки при ресайзе
