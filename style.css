@@ -60,6 +60,10 @@ body {
   margin-top: 2vw;
 }
 .second {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   margin-top: 5vw;
   margin-left: 11.5vw;
   width: 75vw;
@@ -70,10 +74,10 @@ body {
 }
 .rootblocksassortment {
   width: 67vw;
-  height: 29vw;
+  height: 31.0vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-left: 5vw;
+  margin-left: 3vw;
   overflow-y: scroll;
 }
 .block {
@@ -88,8 +92,6 @@ body {
   box-shadow: 0px 0px 20px #3f3f3f;
 }
 .second > h1 {
-  justify-self: center;
-  padding-top: 2vw;
   color: #6c646f;
   font-family: "M PLUS 1p";
   font-size: 2.4vw;
