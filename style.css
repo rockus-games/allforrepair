@@ -8,56 +8,96 @@ body {
   height: 6vw;
   display: flex;
   background-color: #597aac;
-  justify-content: space-between;
+  justify-content: center;
   align-content: center;
   z-index: 999;
   position: fixed;
 }
 .header > h1 {
-  font-size: 2vw;
+  font-size: 3vw;
   align-self: center;
   color: #fff;
   font-family: "M PLUS 1p";
-  margin-left: 15vw;
-}
-.header > div {
-  display: flex;
-  flex-direction: column;
-  text-align: end;
-  align-self: center;
-  margin-right: 15vw;
-}
-.header > div > a {
-  font-size: 1.3vw;
-  text-decoration: none;
-  color: transparent;
-  color: #fff;
-  font-family: "Roboto";
 }
 .first {
   display: flex;
+  justify-content: center;
 }
 .first > div {
-  width: 70vw;
+  background-image: url(./images/ourassortment.png);
+  width: 75vw;
   height: 40vw;
-  background-color: #e5e5e5;
-  margin-top: 9vw;
-  margin-left: 15vw;
+  background-size: 75vw 40vw;
+  margin-top: 10vw;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border-radius: 2vw;
 }
-.first > div > img {
-  width: 67vw;
+.first > div > div {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2vw;
 }
-.first > div > h1 {
-  margin: 0%;
-  font-size: 2.6vw;
-  text-align: center;
+.first > div > div > div {
+  margin-left: 1.8vw;
+}
+.first > div > div > img {
+  width: 20vw;
+  margin-left: 2vw;
+}
+.first > div > div > div > h1 {
+  color: #323232;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 2.5vw;
+  margin-bottom: 0%;
+}
+.first > div > div > div > h2 {
   color: #597aac;
   font-family: "M PLUS 1p";
-  margin-top: 2vw;
+  font-weight: 400;
+  font-size: 2.5vw;
+  margin: 0%;
+}
+.first > div > div > div > h3 {
+  color: #323232;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 1.5vw;
+  margin: 0%;
+}
+.buttons > a {
+  text-decoration: none;
+}
+.buttons > a > div {
+  width: 18.1vw;
+  height: 5vw;
+  background-color: #597aac;
+  margin-left: 1.5vw;
+  border-radius: 0.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.buttons > a > div > h1 {
+  color: transparent;
+  color: white;
+  font-family: "Roboto";
+  font-size: 1.7vw;
+  font-weight: 400;
+}
+.fontsize {
+  font-size: 2.3vw !important;
+}
+#avito {
+  width: 5vw;
+  margin-left: 4.1vw;
+}
+.open {
+  width: 20vw;
+  height: 6vw;
+  background-color: #c7c7c7;
 }
 .second {
   justify-content: center;
@@ -74,7 +114,7 @@ body {
 }
 .rootblocksassortment {
   width: 67vw;
-  height: 31.0vw;
+  height: 31vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-left: 3vw;
