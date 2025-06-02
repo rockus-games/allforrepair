@@ -52,7 +52,7 @@ const nextBtnReviews = document.getElementById("nextBtnReviews");
 
 // Расстояние прокрутки (больше, чем в third)
 const getReviewsScrollStep = () =>
-  window.innerWidth * (isMobile() ? 0.68 : 0.62);
+  window.innerWidth * (isMobile() ? 0.82 : 0.62);
 
 let reviewsScrollStep = getReviewsScrollStep();
 window.addEventListener("resize", () => {
@@ -91,24 +91,29 @@ function updateStoreStatus() {
   const isOpen = currentHour >= 9 && currentHour < 21;
 
   // Обновляем статус для десктопной версии
-  const openElement = document.querySelector(".open h1");
+  const openElement = document.querySelector(".open");
   if (openElement) {
-    openElement.textContent = isOpen ? "Открыто" : "Закрыто";
-    openElement.style.color = isOpen ? "#000000" : "#000000";
-    openElement.style.fontFamily = '"Roboto"';
-    openElement.style.fontSize = "2vw";
-    openElement.style.textAlign = "center";
-    openElement.style.marginTop = "2vw";
+    const statusElement = openElement.querySelector("h1");
+    const timeElement = openElement.querySelector("h2");
+
+    if (statusElement && timeElement) {
+      statusElement.innerHTML = isOpen
+        ? '<span style="color: #000000">Открыто</span>'
+        : '<span style="color: #000000">Закрыто</span>';
+
+      timeElement.textContent = isOpen ? "9:00-21:00" : `До 9:00`;
+    }
   }
 
   // Обновляем статус для мобильной версии
   const openMobElement = document.getElementById("openmob");
   if (openMobElement) {
-    const h1Element = openMobElement.querySelector("h1");
-    if (h1Element) {
-      h1Element.textContent = isOpen ? "Открыто" : "Закрыто";
-      h1Element.style.color = isOpen ? "#000000" : "#000000";
-      openElement.style.fontSize = "5vw";
+    const spans = openMobElement.querySelectorAll("span");
+    if (spans.length >= 2) {
+      spans[0].textContent = isOpen ? "9:00-21:00" : "До 9:00";
+      spans[1].innerHTML = isOpen
+        ? '<span style="color: #000000">Открыто</span>'
+        : '<span style="color: #000000">Закрыто</span>';
     }
   }
 }
