@@ -81,6 +81,15 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
+.buttons > div {
+  width: 18.1vw;
+  height: 5vw;
+  background-color: #597aac;
+  border-radius: 0.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 .buttons > a > div > h1 {
   color: transparent;
   color: white;
@@ -89,6 +98,9 @@ body {
   font-weight: 400;
 }
 .buttons > a > div > img {
+  width: 4vw;
+}
+.buttons > div > a > img {
   width: 4vw;
 }
 .fontsize {
@@ -293,6 +305,7 @@ body {
   font-family: "M PLUS 1p";
   color: #363636;
   margin-left: 1vw;
+  font-size: 1.5vw;
 }
 .reviews-gallery > div > h1 {
   font-family: "Roboto";
@@ -365,7 +378,7 @@ body {
   flex-direction: column;
   margin-right: 15vw;
   text-align: end;
-  margin-top: 3vw;
+  margin-top: 2vw;
   margin-left: 49vw;
   white-space: nowrap;
 }
@@ -411,6 +424,9 @@ body {
   font-size: 3vw !important;
   text-align: center;
   margin: 0% !important;
+}
+.open > h2 {
+  font-size: 1.5vw;
 }
 @media screen and (max-width: 500px) {
   .header {
@@ -458,6 +474,9 @@ body {
   .open {
     display: none;
   }
+  .reviews-gallery > div > div > h1 {
+    font-size: 8vw !important;
+  }
   .buttons {
     display: flex;
     flex-wrap: wrap;
@@ -482,6 +501,13 @@ body {
     justify-content: center;
     border-radius: 2vw;
   }
+  .buttons > div {
+    width: 40vw;
+    height: 12vw;
+    margin: 0 !important;
+    justify-content: center;
+    border-radius: 2vw;
+  }
 
   .buttons > a > div > h1 {
     font-size: 3.8vw;
@@ -490,6 +516,10 @@ body {
   .buttons > a > div > img {
     width: 7vw;
   }
+  .buttons > div > a > img {
+    width: 7vw;
+    margin-left: 4vw;
+  }
 
   #avito {
     width: 12vw;
@@ -497,8 +527,8 @@ body {
   }
 
   /* Первая строка кнопок (номер и написать) */
-  .buttons > a:nth-child(1),
-  .buttons > a:nth-child(2) {
+  .buttons > a:nth-child(),
+  .buttons > div:nth-child(2) {
     order: 1;
   }
 
@@ -509,7 +539,7 @@ body {
   }
   /* Кнопка "Открыто" */
   #openmob {
-    order: 2;
+    order: 0;
     width: 25.5vw;
     height: 12vw;
     margin: 0%;
