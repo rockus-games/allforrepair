@@ -428,6 +428,13 @@ body {
 .open > h2 {
   font-size: 1.5vw;
 }
+.open.open-status {
+  background-color: #4caf50 !important; /* Зеленый для открыто */
+}
+
+.open.closed-status {
+  background-color: #f44336 !important; /* Красный для закрыто */
+}
 @media screen and (max-width: 500px) {
   .header {
     height: 20vw;
@@ -459,6 +466,13 @@ body {
   .first > div > div > div > h1 {
     font-size: 6vw;
     width: 50vw;
+  }
+  #openmob.open-status {
+    background-color: #4caf50 !important;
+  }
+
+  #openmob.closed-status {
+    background-color: #f44336 !important;
   }
   .first > div > div > div > h2 {
     font-size: 5.8vw;

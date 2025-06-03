@@ -90,8 +90,8 @@ function updateStoreStatus() {
   const currentHour = parseInt(moscowTime);
   const isOpen = currentHour >= 9 && currentHour < 21;
 
-  // Обновляем статус для десктопной версии
-  const openElement = document.querySelector(".open");
+  // Для десктопной версии
+  const openElement = document.querySelector(".open:not(#openmob)");
   if (openElement) {
     const statusElement = openElement.querySelector("h1");
     const timeElement = openElement.querySelector("h2");
@@ -101,11 +101,14 @@ function updateStoreStatus() {
         ? '<span style="color: #000000">Открыто</span>'
         : '<span style="color: #000000">Закрыто</span>';
 
-      timeElement.textContent = isOpen ? "9:00-21:00" : `До 9:00`;
+      timeElement.textContent = isOpen ? "9:00-21:00" : "До 9:00";
+
+      // Меняем цвет фона точно так же, как меняется текст
+      openElement.style.backgroundColor = isOpen ? "#7DCC79" : "#CC7979";
     }
   }
 
-  // Обновляем статус для мобильной версии
+  // Для мобильной версии
   const openMobElement = document.getElementById("openmob");
   if (openMobElement) {
     const spans = openMobElement.querySelectorAll("span");
@@ -114,12 +117,15 @@ function updateStoreStatus() {
       spans[1].innerHTML = isOpen
         ? '<span style="color: #000000">Открыто</span>'
         : '<span style="color: #000000">Закрыто</span>';
+
+      // Меняем цвет фона для мобильной версии
+      openMobElement.style.backgroundColor = isOpen ? "#7DCC79" : "#CC7979";
     }
   }
 }
 
-// Вызываем функцию при загрузке страницы
+// Вызываем при загрузке
 updateStoreStatus();
 
-// Обновляем статус каждую минуту
+// И каждую минуту обновляем
 setInterval(updateStoreStatus, 60000);
